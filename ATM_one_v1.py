@@ -22,9 +22,8 @@ def login():
         
     print("Invalid account number. Please try again \n")
     init()
-           
-               
-         
+
+    return         
 
 
 def register():
@@ -43,6 +42,8 @@ def register():
     print("=======================================")
 
     login()
+
+    return
 
 
 def updateBalance(availableBalance, request):
@@ -97,9 +98,15 @@ def bankOperations(accountNum):
         print("Invalid option, please try again \n") 
         bankOperations(accountNum)
 
+    return
 
 def genAccNum():
-    return random.randrange(1111111111, 9999999999)
+    validAccNum =  random.randrange(111111111, 999999999)
+    if (validAccNum % 11 != 0):
+        genAccNum() 
+    else:
+        return validAccNum
+           
 
 
 def init():
@@ -115,7 +122,8 @@ def init():
     else:
         print("Invalid option entered, Please try again") 
         init()    
-
+    
+    return
             
 
 
