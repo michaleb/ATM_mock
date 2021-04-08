@@ -51,7 +51,6 @@ def updateBalance(availableBalance, request):
     return availableBalance
     
 
-
 def bankOperations(accountNum):
     
     print("\n These are the available options:\n")
@@ -108,7 +107,6 @@ def genAccNum():
         return validAccNum
            
 
-
 def init():
     
     print(datetime.now().strftime("%m/%d/%Y - %H:%M:%S \n"))
@@ -125,7 +123,6 @@ def init():
     
     return
             
-
 
 if __name__ == "__main__":
     init()
